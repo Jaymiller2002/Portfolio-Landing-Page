@@ -20,11 +20,9 @@ import Footer from './Footer'
 function Layout() {
   return (
       <>
-        <Header />
         <div id='page-content'>
           <Outlet />
         </div>
-        <Footer />
       </>
   )
 }
