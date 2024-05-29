@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './App.css'; // Import your CSS file
 import { Card } from 'react-bootstrap';
+import Picture from './assets/Blogpic.jpeg';
 
 const Calculator = () => {
   const [display, setDisplay] = useState('');
@@ -139,7 +140,7 @@ const App = () => {
             <Link to={'#'}>Hire Me</Link>
           </div>
           <div className="card">
-            <img src="" alt="Logo" />
+            <img src={Picture} alt="Logo" />
             <div className="info">
               <h1>Jay Miller</h1>
               <p>
