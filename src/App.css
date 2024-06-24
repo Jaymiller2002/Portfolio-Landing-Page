@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 /* Reset */
-:root, html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,28 +21,55 @@
 /* Global Styles */
 body {
   font-family: var(--font-family);
-  background-color: rgba(0, 0, 0, 0.1); /* Light gray background */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure the body takes up full height */
+  min-width: 100vw;
 }
 
 /* Header */
 header {
-  background-color: var(--main-bg-color); /* Dark gray background */
-  color: var(--main-text-color); /* White text */
+  background-color: #444; /* New background color */
+  color: var(--main-text-color);
   padding: 20px;
   text-align: center;
+  width: 100%; /* Ensure header takes full width */
 }
 
-header h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+/* Header elements */
+.header h1 {
+  font-size: 30px; /* New font size */
+  margin-bottom: 30px; /* New margin */
 }
 
 .header p {
   margin-bottom: 20px;
 }
 
+.header .Btn1 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px; /* New padding */
+  border-radius: 5px;
+  border: none;
+  color: #e0e0e0; /* New text color */
+  background-color: #0056b3; /* New background color */
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header .Btn1:hover {
+  background-color: #004080; /* New hover background color */
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   padding: 0;
@@ -59,18 +86,22 @@ nav ul li button {
   border: none;
   color: var(--main-text-color);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px; /* New font size */
 }
 
 /* Main Sections */
 section {
   width: 100%;
-  background-color: #fff;
+  background-color: #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 140px;
-  height: 100%; /* Make section fill the height of viewport */
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Section Header */
 .section-header {
   text-align: center;
   margin-bottom: 30px;
@@ -92,6 +123,15 @@ section {
 }
 
 /* Cards */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* New box shadow */
+  padding: 30px; /* New padding */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .card img {
   width: 100px;
   height: 100px;
@@ -103,20 +143,15 @@ section {
 .card h1 {
   font-size: 24px;
   margin-bottom: 10px;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .card p {
   font-size: 16px;
   color: #666;
-  line-height: 1.6;
-  text-align: center;
 }
 
 .card p ul li {
   list-style: none;
-  margin-right: 20px;
 }
 
 /* Calculator */
@@ -148,17 +183,17 @@ input[type="text"] {
 }
 
 .calculator button {
-  width: calc(100% - 5px);
+  width: 100%;
   height: 40px;
   font-size: 18px;
   border: none;
   border-radius: 3px;
-  background-color: #e0e0e0;
+  background-color: #d3d3d3; /* New background color */
   cursor: pointer;
 }
 
 .calculator button:hover {
-  background-color: #9b9b9b;
+  background-color: #b3b3b3; /* New hover background color */
 }
 
 .calculator button:active {
@@ -196,7 +231,7 @@ input[type="text"] {
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 5px 10px;
-  background-color: var(--secondary-bg-color);
+  background-color: #e0e0e0; /* New background color */
   border-radius: 5px;
   text-decoration: none;
   color: var(--main-bg-color);
@@ -225,11 +260,10 @@ input[type="text"] {
 
 .contact-card button {
   background-color: var(--highlight-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   color: var(--main-text-color);
   border: none;
   border-radius: 3px;
-  padding: 5px 10px;
+  padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -238,34 +272,19 @@ input[type="text"] {
   background-color: var(--hover-color);
 }
 
-.contact-arrows {
-  display: flex;
-  justify-content: space-between;
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.contact-arrows i {
-  color: black;
-}
-
-.contact-arrows i:hover {
-  color: rgba(146, 146, 146, 0.915);
-}
-
 /* Footer */
 footer {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   padding: 30px;
   text-align: center;
+  width: 100%; /* Ensure footer takes full width */
 }
 
 footer .social-links a i {
   color: var(--main-text-color);
   margin-right: 10px;
   font-size: 24px;
-  margin-bottom: 10px;
 }
 
 footer .social-links a i:hover {
@@ -274,7 +293,23 @@ footer .social-links a i:hover {
 
 footer p {
   margin-top: 60px;
-  margin-right: 465px;
+}
+
+/* Buttons */
+.projects-button, .features-button, .about-button {
+  background-color: var(--highlight-color);
+  border-radius: 5px;
+  border: 1px solid black;
+  color: white;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.projects-button:hover, .features-button:hover, .about-button:hover {
+  background-color: var(--hover-color);
 }
 
 /* Responsive */
@@ -310,5 +345,101 @@ footer p {
 
   footer .social-links a {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .header .Btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  nav ul li button {
+    font-size: 12px;
+  }
+
+  .section-header h1 {
+    font-size: 20px;
+  }
+
+  .section-header a {
+    font-size: 12px;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card h1 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  footer .social-links a {
+    font-size: 18px;
+  }
+}
+
+/* Media Query for even smaller screens */
+@media (max-width: 360px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  .header .Btn {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  nav ul li {
+    margin-bottom: 6px;
+  }
+
+  nav ul li button {
+    font-size: 10px;
+  }
+
+  .section-header h1 {
+    font-size: 18px;
+  }
+
+  .section-header a {
+    font-size: 10px;
+  }
+
+  .card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card h1 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 10px;
+  }
+
+  footer .social-links a {
+    font-size: 16px;
   }
 }

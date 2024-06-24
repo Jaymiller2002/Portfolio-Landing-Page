@@ -121,12 +121,12 @@ const App = () => {
             <p>Explore my work and learn more about me.</p>
             <p>There are many cool features on my website showcasing my skills, and more to come</p>
             <p>Like for instance there is a button counter and random word generator below</p>
-            <button onClick={incrementButtonCount} style={{backgroundColor: 'green', border: '1px solid green', borderRadius: '5px', color: 'white', marginRight: '10px', marginBottom: '15px'}}>Increase</button>
-            <button onClick={decrementButtonCount} style={{backgroundColor: 'red', border: '1px solid red', borderRadius: '5px', color: 'white', marginRight: '10px'}}>Decrease</button>
-            <button onClick={multiplyButtonCount} style={{backgroundColor: 'cyan', border: '1px solid cyan', borderRadius: '5px', color: 'black', marginRight: '10px'}}>Multiply by 10</button>
-            <button onClick={divideButtonCount} style={{backgroundColor: 'violet', border: '1px solid violet', borderRadius: '5px', color: 'white', marginRight: '10px'}}>Divide by 2</button>
+            <button className='Btn1' onClick={incrementButtonCount}>Increase</button>
+            <button className='Btn1' onClick={decrementButtonCount}>Decrease</button>
+            <button className='Btn1' onClick={multiplyButtonCount}>Multiply by 10</button>
+            <button className='Btn1' onClick={divideButtonCount}>Divide by 2</button>
             <p style={{marginTop: '20px'}}>Button Count: {buttonCount}</p>
-            <button onClick={generateNewRandomWord} style={{marginTop: '20px'}}>Generate Random Word</button>
+            <button className='Btn1' onClick={generateNewRandomWord}>Generate Random Word</button>
             {randomWord && <p style={{marginTop: '10px'}}>Random Word: {randomWord}</p>}
             <p style={{marginTop: '10px'}}>Random Number: {Math.floor(Math.random() * 100)}</p>
           </div>
@@ -137,7 +137,6 @@ const App = () => {
         <section id="about">
           <div className="header">
             <h1>About Me</h1>
-            <Link to={'#'}>Hire Me</Link>
           </div>
           <div className="card">
             <img src={Picture} alt="Logo" />
@@ -166,6 +165,7 @@ const App = () => {
               </p>
             </div>
           </div>
+          <button className='about-button'>Hire Me!</button>
         </section>
       )}
 
@@ -173,7 +173,7 @@ const App = () => {
         <section id="features">
           <div className="header">
             <h1>Features</h1>
-            <Link to="#">See More</Link>
+            <button className='features-button'>See More</button>
           </div>
           <div className="feature-cards">
             <div className="card">
@@ -199,7 +199,7 @@ const App = () => {
         <section id="projects">
           <div className="header">
             <h1>Projects</h1>
-            <Link to="#">View All Projects</Link>
+            <button className='projects-button'>View All Projects</button>
           </div>
           <div className="project-cards">
             <iframe title="Project 1" src="https://jaymiller2002.github.io/Tic-Tac-Toe/">
@@ -248,12 +248,7 @@ const App = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </div>
-          <div className='contact-arrows'>
-            <i className='fa-solid fa-arrow-down'></i>
-            <i className='fa-solid fa-arrow-down'></i>
-            <i className='fa-solid fa-arrow-down'></i>
-          </div>
+            </div>
         </section>
       )}
 
