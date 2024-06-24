@@ -1,15 +1,26 @@
-/* Reset */
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
+/* Reset */
 :root, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CSS Variables */
+:root {
+  --main-bg-color: #333;
+  --main-text-color: #fff;
+  --secondary-bg-color: #f0f0f0;
+  --highlight-color: #007bff;
+  --hover-color: #003771;
+  --font-family: 'Montserrat', Arial, sans-serif;
+}
+
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   background-color: rgba(0, 0, 0, 0.1); /* Light gray background */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
@@ -17,8 +28,8 @@ body {
 
 /* Header */
 header {
-  background-color: #333; /* Dark gray background */
-  color: #fff; /* White text */
+  background-color: var(--main-bg-color); /* Dark gray background */
+  color: var(--main-text-color); /* White text */
   padding: 20px;
   text-align: center;
 }
@@ -32,24 +43,10 @@ header h1 {
   margin-bottom: 20px;
 }
 
-.counter {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.random-word {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.random-number {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 nav ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 nav ul li {
@@ -60,40 +57,41 @@ nav ul li {
 nav ul li button {
   background: none;
   border: none;
-  color: #fff;
+  color: var(--main-text-color);
   cursor: pointer;
   font-size: 16px;
 }
 
 /* Main Sections */
 section {
-  width: 100%; /* Adjust width as needed */
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   height: 100%; /* Make section fill the height of viewport */
 }
 
-section .header {
+.section-header {
   text-align: center;
   margin-bottom: 30px;
 }
 
-section .header h1 {
+.section-header h1 {
   font-size: 28px;
 }
 
-section .header a {
-  color: #333;
+.section-header a {
+  color: var(--main-bg-color);
   text-decoration: none;
   font-size: 16px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--main-bg-color);
 }
 
-section .header a:hover {
+.section-header a:hover {
   border-bottom: 2px solid #666;
 }
 
+/* Cards */
 .card img {
   width: 100px;
   height: 100px;
@@ -121,10 +119,10 @@ section .header a:hover {
   margin-right: 20px;
 }
 
-/* Calulator */
+/* Calculator */
 .calculator {
   width: 200px;
-  background-color: #f0f0f0;
+  background-color: var(--secondary-bg-color);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
@@ -167,13 +165,12 @@ input[type="text"] {
   background-color: #6e6e6e;
 }
 
-/* Styles for Projects Section */
+/* Projects Section */
 #projects {
   text-align: center;
   margin-top: 20px;
 }
 
-/* Project Cards */
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,21 +196,22 @@ input[type="text"] {
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 5px 10px;
-  background-color: #f0f0f0;
+  background-color: var(--secondary-bg-color);
   border-radius: 5px;
   text-decoration: none;
-  color: #333;
+  color: var(--main-bg-color);
 }
 
 .projects-links a:hover {
   background-color: #ccc;
 }
 
+/* Contact Section */
 .header-contact {
   text-align: center;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: var(--secondary-bg-color);
 }
 
 .contact-card {
@@ -226,9 +224,9 @@ input[type="text"] {
 }
 
 .contact-card button {
-  background-color: #007bff;
+  background-color: var(--highlight-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: var(--main-text-color);
   border: none;
   border-radius: 3px;
   padding: 5px 10px;
@@ -237,7 +235,7 @@ input[type="text"] {
 }
 
 .contact-card button:hover {
-  background-color: #003771;
+  background-color: var(--hover-color);
 }
 
 .contact-arrows {
@@ -257,14 +255,14 @@ input[type="text"] {
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 30px;
   text-align: center;
 }
 
-footer .social-links a i{
-  color: #fff;
+footer .social-links a i {
+  color: var(--main-text-color);
   margin-right: 10px;
   font-size: 24px;
   margin-bottom: 10px;
@@ -289,11 +287,11 @@ footer p {
     font-size: 14px;
   }
 
-  section .header h1 {
+  .section-header h1 {
     font-size: 24px;
   }
 
-  section .header a {
+  .section-header a {
     font-size: 14px;
   }
 
