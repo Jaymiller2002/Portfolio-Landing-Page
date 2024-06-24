@@ -67,7 +67,7 @@ section {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 140px;
+  padding: 140px !important;
   height: 100%; /* Make section fill the height of viewport */
 }
 
