@@ -29,23 +29,22 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ensure the body takes up full height */
+  min-height: 100vh;
   min-width: 100vw;
 }
 
 /* Header */
 header {
-  background-color: #444; /* New background color */
+  background-color: #444;
   color: var(--main-text-color);
   padding: 20px;
   text-align: center;
-  width: 100%; /* Ensure header takes full width */
+  width: 100%;
 }
 
-/* Header elements */
 .header h1 {
-  font-size: 30px; /* New font size */
-  margin-bottom: 30px; /* New margin */
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .header p {
@@ -55,18 +54,18 @@ header {
 .header .Btn1 {
   display: inline-block;
   margin-top: 10px;
-  padding: 12px 24px; /* New padding */
+  padding: 12px 24px;
   border-radius: 5px;
   border: none;
-  color: #e0e0e0; /* New text color */
-  background-color: #0056b3; /* New background color */
+  color: #e0e0e0;
+  background-color: #0056b3;
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
 }
 
 .header .Btn1:hover {
-  background-color: #004080; /* New hover background color */
+  background-color: #004080;
 }
 
 /* Navigation */
@@ -86,13 +85,13 @@ nav ul li button {
   border: none;
   color: var(--main-text-color);
   cursor: pointer;
-  font-size: 18px; /* New font size */
+  font-size: 18px;
 }
 
 /* Main Sections */
 section {
   width: 100%;
-  background-color: #ccc;
+  background-color: #f9f9f9; /* Changed to match "features" background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 60px 20px;
   display: flex;
@@ -112,10 +111,10 @@ section {
 }
 
 .section-header a {
-  color: var(--main-bg-color);
+  color: var(--highlight-color); /* Changed to match "features" links */
   text-decoration: none;
   font-size: 16px;
-  border-bottom: 2px solid var(--main-bg-color);
+  border-bottom: 2px solid var(--highlight-color);
 }
 
 .section-header a:hover {
@@ -126,8 +125,8 @@ section {
 .card {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* New box shadow */
-  padding: 30px; /* New padding */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -188,12 +187,12 @@ input[type="text"] {
   font-size: 18px;
   border: none;
   border-radius: 3px;
-  background-color: #d3d3d3; /* New background color */
+  background-color: #d3d3d3;
   cursor: pointer;
 }
 
 .calculator button:hover {
-  background-color: #b3b3b3; /* New hover background color */
+  background-color: #b3b3b3;
 }
 
 .calculator button:active {
@@ -231,7 +230,7 @@ input[type="text"] {
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 5px 10px;
-  background-color: #e0e0e0; /* New background color */
+  background-color: #e0e0e0;
   border-radius: 5px;
   text-decoration: none;
   color: var(--main-bg-color);
@@ -278,7 +277,7 @@ footer {
   color: var(--main-text-color);
   padding: 30px;
   text-align: center;
-  width: 100%; /* Ensure footer takes full width */
+  width: 100%;
 }
 
 footer .social-links a i {
@@ -399,7 +398,6 @@ footer p {
   }
 }
 
-/* Media Query for even smaller screens */
 @media (max-width: 360px) {
   header h1 {
     font-size: 16px;
