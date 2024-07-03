@@ -208,9 +208,9 @@ const App = () => {
               <iframe title="Project 6" src="https://jaymiller2002.github.io/New-BlogPost-React-Only/"></iframe>
             </div>
             <div className="projects-links">
+              <a href="https://doglist.vercel.app/">Capstone Project</a>
               <a href="https://jaymiller2002.github.io/Tic-Tac-Toe/">Tic-Tac-Toe</a>
               <a href="https://jaymiller2002.github.io/weather-app-JS-Only/">Weather App</a>
-              <a href="https://doglist.vercel.app/">Image Gallery Slider</a>
               <a href="https://to-do-list-mauve-gamma-70.vercel.app/">To Do List</a>
               <a href="https://jaymiller2002.github.io/random-resturant/">Random Restaurant</a>
               <a href="https://jaymiller2002.github.io/New-BlogPost-React-Only/">My Blog</a>
